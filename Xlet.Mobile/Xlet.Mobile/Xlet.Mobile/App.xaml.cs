@@ -1,3 +1,6 @@
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -26,6 +29,9 @@ namespace Xlet.Mobile
 
         protected override void OnStart()
         {
+            AppCenter.Start("ios=55bb8db2-0a98-4c2e-9dd0-e27a6c5ec37d;" +
+                  "android=7ff37006-dd75-41e4-83df-3b02092f5b14",
+                  typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

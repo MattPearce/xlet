@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+      x:Class="Xlet.Mobile.Views.Templates.ExpenseChartTemplate">
+
+    <Grid.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Grid.Resources>
+
+    <Grid RowSpacing="0" ColumnSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <gradient:SfGradientView Grid.RowSpan="4">
+            <gradient:SfGradientView.BackgroundBrush>
+                <gradient:SfLinearGradientBrush>
+                    <gradient:SfLinearGradientBrush.GradientStops>
+                        <gradient:SfGradientStop Color="{DynamicResource Liliac}" Offset="0.0" />
+                        <gradient:SfGradientStop Color="{DynamicResource Purpleish-Blue}" Offset="1.0" />
+                    </gradient:SfLinearGradientBrush.GradientStops>
+                </gradient:SfLinearGradientBrush>
+            </gradient:SfGradientView.BackgroundBrush>
+        </gradient:SfGradientView>
+
+        <!-- Total balance -->
+        <Label Grid.Row="0"
+               Margin="16,16,16,4" 
+               Text="Main Account"
+               TextColor="{DynamicResource Gray-White}"
+               FontSize="24"
+               FontFamily="{DynamicResource Montserrat-Medium}"
+               LineHeight="{OnPlatform Android=1.5, Default=-1}" />
+
+        <!-- Total balance -->
+        <Label Grid.Row="1"
+               Margin="16,16,16,4" 
+               Text="GD35A65D...65R6DFAG"
+               TextColor="{DynamicResource Gray-White}"
+               FontSize="16"
+               FontFamily="{DynamicResource Montserrat-Medium}"
+               LineHeight="{OnPlatform Android=1.5, Default=-1}" />
+
+        <!-- Total balance -->
+        <Label Grid.Row="2"
+               Margin="16,16,16,4" 
+               Text="Total Balance"
+               TextColor="{DynamicResource Gray-White}"
+               FontSize="12"
+               FontFamily="{DynamicResource Montserrat-Medium}"
+               LineHeight="{OnPlatform Android=1.5, Default=-1}" />
+
+        <Label Grid.Row="3" 
+               Margin="16,0,16,32"
+               TextColor="{DynamicResource Gray-White}"
+               FontSize="24"
+               FontFamily="{DynamicResource Montserrat-Bold}"
+               LineHeight="{OnPlatform Android=1.5, Default=-1}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding TotalBalance, StringFormat='{0:F2}'}" />
+                    <Span Text=" XLM" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+    </Grid>
+</Grid>

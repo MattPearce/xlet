@@ -1,0 +1,5 @@
+UUID
+
+Service = 8903138b-00a6-4285-843c-c2d3ae031d53
+
+Test Characteristic = d834df8f-ef96-4230-9692-b3aabe29b085

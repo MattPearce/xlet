@@ -139,6 +139,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.2.1</Version>
+    </PackageReference>
     <PackageReference Include="SkiaSharp.Extended">
       <Version>1.60.0</Version>
     </PackageReference>

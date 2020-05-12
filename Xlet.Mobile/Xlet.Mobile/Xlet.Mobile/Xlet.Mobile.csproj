@@ -27,6 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
     <PackageReference Include="Plugin.BLE" Version="2.1.1" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />

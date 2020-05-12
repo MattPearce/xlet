@@ -34,7 +34,7 @@
     <key>CFBundleDisplayName</key>
     <string>Xlet.Mobile</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.Xlet.Mobile</string>
+    <string>com.metricode.xletdev</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>

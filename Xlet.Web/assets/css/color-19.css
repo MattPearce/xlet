@@ -1,0 +1,160 @@
+/*------------------------------
+    01. START FONT COLOR
+------------------------------*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title h3,
+.why-us h3,
+.main-features .one-feature h5,
+.recent-news .recent-news-slider .item h3,
+.download-app h2,
+.git-in-touch .contact-info .info-box h5,
+.git-in-touch .contact-info .info-box a,
+.blog-page .blog-box .blog-details h3 a,
+aside.sidebar .categories ul li a,
+aside.sidebar .recent-post .post h4 a,
+aside.sidebar .tags ul li a,
+.single-blog-page .blog-box .blog-details h3 {
+    color: #353535;
+}
+
+/*------------------------------
+    01. END FONT COLOR
+------------------------------*/
+
+/*------------------------------
+    02. START MAIN COLOR
+------------------------------*/
+.themes-colors span,
+.preloader,
+.background-withcolor,
+.foxapp-header.sticky,
+.foxapp-header .dropdown-menu .dropdown-item:hover,
+.foxapp-header .dropdown-menu .dropdown-item.active,
+.box,
+.btn-theme.btn-colord:before,
+.faq .accordion .card .card-header h5 .btn.collapsed,
+.our-team .team-slider .slick-dots li.slick-active button,
+.clients-testimonial .testimonial-slider .item .client-testimonial,
+.clients-testimonial .testimonial-slider .slick-dots li.slick-active button,
+.prices .price-table .bottom,
+.prices .price-table .top .offer,
+.recent-news .recent-news-slider .slick-dots li.slick-active button,
+nav .pagination .page-item.active .page-link,
+aside.sidebar .gray-panel h3:after {
+    background-image: -moz-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    background-image: -webkit-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    background-image: -ms-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+}
+
+@media (max-width: 992px) {
+    .foxapp-header {
+        background-image: -moz-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+        background-image: -webkit-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+        background-image: -ms-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    }
+}
+
+a,
+.btn-white,
+.lnr,
+.section-title h3 span,
+.other-features .other-features-slider .item h4,
+.clients-testimonial .testimonial-slider .item .client-info h3,
+.fun-facts .fact-box h5,
+.fun-facts .fact-box h6,
+.prices .price-table .top h4,
+.prices .price-table .top h3,
+.prices .price-table .top h5,
+.our-team .team-slider .person h3,
+footer .subscribe .subscribe-form h4,
+.blog-page .blog-box:hover .blog-details h3 a,
+.single-blog-page .blog-box .post-tag-area ul li a:hover,
+.comments-container .comments-list li .reply:hover {
+
+    background-image: -moz-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    background-image: -webkit-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    background-image: -ms-linear-gradient(-45deg, rgb(208, 230, 165) 0%, rgb(134, 227, 206) 70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+a,
+.btn-theme,
+.section-title h3 span.white,
+.foxapp-header .navbar .navbar-nav .nav-item>.nav-link,
+footer .footer-widgets .widget ul li a {
+    -webkit-text-fill-color: initial;
+}
+
+a,
+.btn-white,
+.foxapp-header .dropdown-menu .dropdown-item:hover {
+    color: #a8e4bb;
+}
+
+.main-features .features-circle:before,
+.clients-testimonial .testimonial-slider .item .client-info figure,
+.faq .accordion,
+.faq .accordion .card .card-header h5:after,
+.git-in-touch .form-group .form-control,
+footer .subscribe .subscribe-form .form-group .form-control,
+aside.sidebar .search .form-group .form-control,
+.single-blog-page .blog-box .blog-details blockquote,
+.comments-form .form-group .form-control {
+    border-color: #a8e4bb;
+}
+
+.clients-testimonial .testimonial-slider .item .client-testimonial:after {
+    border-top-color: #a8e4bb;
+}
+
+.features-circle svg circle {
+    stroke: #a8e4bb;
+}
+
+.lity,
+.watch-video .video:before {
+    background-image: -moz-linear-gradient(-45deg, rgba(208, 230, 165, 0.7) 0%, rgba(134, 227, 206, 0.7) 70%);
+    background-image: -webkit-linear-gradient(-45deg, rgba(208, 230, 165, 0.7) 0%, rgba(134, 227, 206, 0.7) 70%);
+    background-image: -ms-linear-gradient(-45deg, rgba(208, 230, 165, 0.7) 0%, rgba(134, 227, 206, 0.7) 70%);
+}
+
+/*------------------------------
+    02. END MAIN COLOR
+------------------------------*/
+
+/*------------------------------
+    03. START SECOND COLOR
+------------------------------*/
+
+.btn-theme,
+.btn-theme:hover,
+.boxes .box:after,
+.git-in-touch .form-group .form-control~.focus-border,
+aside.sidebar .search .form-group .form-control~.focus-border,
+.comments-form .form-group .form-control~.focus-border {
+    background: #296565;
+}
+
+.our-team .team-slider .person:hover h3,
+.our-team .team-slider .person ul li a,
+.boxes .box:hover .lnr,
+footer .copyright a:hover {
+    color: #296565;
+    -webkit-text-fill-color: initial;
+    background-image: none;
+}
+
+/*------------------------------
+    03. END SECOND COLOR
+------------------------------*/

@@ -18,5 +18,10 @@ namespace Xlet.Mobile.Views.Dashboard
         {
             InitializeComponent();
         }
+
+        private void ToolbarItem_Clicked(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

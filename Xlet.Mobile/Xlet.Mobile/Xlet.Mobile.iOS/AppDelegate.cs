@@ -14,6 +14,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Syncfusion.SfBusyIndicator.XForms.iOS;
 
 namespace Xlet.Mobile.iOS
 {
@@ -43,6 +44,9 @@ namespace Xlet.Mobile.iOS
             SfBorderRenderer.Init();
             SfListViewRenderer.Init();
             SfButtonRenderer.Init();
+            // Need to call this to initialise busy indicator, otherwise it won't work on iOS
+            // https://help.syncfusion.com/xamarin/busy-indicator/getting-started
+            new SfBusyIndicatorRenderer();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

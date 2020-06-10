@@ -26,6 +26,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Make Payment" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <!--  Binding context for my wallet page  -->
     <ContentPage.BindingContext>
         <viewModel:MyWalletViewModel />
@@ -106,7 +110,7 @@
                                 <!-- Transaction Title -->
                                 <Label Grid.Row="1"
                                        Grid.Column="1"
-                                       Margin="0,0,0,16"
+                                       Margin="16,0,0,16"
                                        HorizontalOptions="Start"
                                        Text="{Binding Title}"
                                        TextColor="{DynamicResource Gray-700}"
@@ -125,7 +129,7 @@
                                         <FormattedString>
                                             <Span Text="{Binding IsCredited, Converter={StaticResource BoolToStringConverter}, ConverterParameter=2}" />
                                                 <Span Text="{Binding Amount}" />
-                                                <Span Text="" />
+                                                <Span Text=" " />
                                                 <Span Text="{Binding AssetType}" />
                                             </FormattedString>
                                     </Label.FormattedText>
@@ -151,7 +155,7 @@
                 </listView:SfListView>
             </Grid>
         </ScrollView>
-            <busyindicator:SfBusyIndicator IsVisible="{Binding IsLoading}" Duration="1" AnimationType="Gear" TextColor="#757a7f" VerticalOptions="FillAndExpand" ViewBoxWidth="150" ViewBoxHeight="150" BackgroundColor="White" />
+            <busyindicator:SfBusyIndicator IsVisible="{Binding IsLoading}" Duration="0.5" AnimationType="Cupertino" TextColor="#757a7f" VerticalOptions="FillAndExpand" ViewBoxWidth="75" ViewBoxHeight="75" BackgroundColor="White" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -9,6 +9,25 @@
              xmlns:chat="clr-namespace:Xlet.Mobile.Views.Chat"
              mc:Ignorable="d"
              x:Class="Xlet.Mobile.Views.AppShell">
+    <Shell.FlyoutHeader>
+        <StackLayout>
+            
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Account" Route="account"
+                      Icon="Transactions.png"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Account"
+                      Icon="Transactions.png"
+                      ContentTemplate="{DataTemplate views:Account}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Dashboard"
+                      Icon="Transactions.png"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Dashboard"
+                      Icon="Transactions.png"
+                      ContentTemplate="{DataTemplate dash:HealthCarePage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Accounts"
                       Icon="Transactions.png"
                 FlyoutDisplayOptions="AsMultipleItems">

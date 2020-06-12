@@ -21,17 +21,20 @@
 
 language: python
 python:
-    - "2.7"
+  - "2.7"
 
 sudo: false
 cache:
-    directories:
-        - "~/.platformio"
+  directories:
+    - "~/.platformio"
+
+before_install:
+  - cd Xlet.Wallet
 
 install:
-     - pip install -U platformio
-     - platformio lib install M5Stack
-     - platformio update
+  - pip install -U platformio
+    - platformio lib install M5Stack
+    - platformio update
 
 script:
-    - platformio run
+  - platformio run

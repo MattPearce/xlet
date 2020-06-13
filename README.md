@@ -2,7 +2,7 @@
 
 # The Open Crypto Wallet
 
-![Xlet](https://xlet.io/assets/img/xlet-perspective-small.png "Xlet")
+![Xlet](https://xlet.io/assets/img/xlet-payment.png "Xlet")
 
 ## Project Overview
 

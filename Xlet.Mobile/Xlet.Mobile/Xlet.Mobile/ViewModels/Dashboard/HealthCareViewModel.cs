@@ -130,6 +130,13 @@ namespace Xlet.Mobile.ViewModels.Dashboard
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Gets or sets the health care items collection.
         /// </summary>

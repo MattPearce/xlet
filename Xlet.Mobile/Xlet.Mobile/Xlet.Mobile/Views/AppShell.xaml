@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="clr-namespace:Xlet.Mobile.Views"
+             xmlns:acc="clr-namespace:Xlet.Mobile.Views.Account"
              xmlns:dash="clr-namespace:Xlet.Mobile.Views.Dashboard"
              xmlns:nav="clr-namespace:Xlet.Mobile.Views.Navigation"
              xmlns:chat="clr-namespace:Xlet.Mobile.Views.Chat"
@@ -19,7 +20,7 @@
                 FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Account"
                       Icon="Transactions.png"
-                      ContentTemplate="{DataTemplate views:Account}" />
+                      ContentTemplate="{DataTemplate acc:AccountPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Dashboard"
                       Icon="Transactions.png"

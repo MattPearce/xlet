@@ -1,0 +1,8 @@
+{
+    "name": "Xlet.Targets.M5Stack",
+    "platforms": "espressif32",
+    "frameworks": "arduino",
+    "dependencies": {
+        "M5Stack": "0.3.0"
+    }
+}

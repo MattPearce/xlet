@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <functional>
 #include <typeinfo>
+#include <memory>
 
 #include "DIType.h"
 
@@ -12,6 +13,9 @@ struct DIRegistered
 
     bool GiveOwnership;
 };
+
+template<typename TInterface>
+using DI = std::shared_ptr<DIType<TInterface>>;
 
 class DIContainer
 {
@@ -47,11 +51,11 @@ public:
     }
 
     template<typename TInterface>
-    DIType<TInterface>* Resolve(const std::string& interface)
+    DI<TInterface> Resolve(const std::string& interface)
     {
         auto& factory = m_factories[interface];
 
-        return new DIType<TInterface>((TInterface*)factory.Factory(), factory.GiveOwnership);
+        return std::make_shared<DIType<TInterface>>((TInterface*)factory.Factory(), factory.GiveOwnership);
     }
 
     static DIContainer* GetInstance()

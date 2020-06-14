@@ -13,6 +13,9 @@ public:
 
     ~DIType()
     {
+        // This extra step is necessary as the contained type may be registered
+        // as a singleton or transient, in which case it needs to be handled
+        // differently
         if(m_hasOwnership)
         {
             delete m_pInstance;
@@ -24,7 +27,7 @@ public:
     {
         return m_pInstance;
     }
-
+    
 private:
     // Disable copying
     DIType(const DIType&) = delete;

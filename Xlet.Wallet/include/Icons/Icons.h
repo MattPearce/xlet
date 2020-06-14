@@ -4,10 +4,12 @@
 
 #include "Money.h"
 #include "MoneyActive.h"
+#include "MoneyButton.h"
 #include "QR.h"
 #include "QRActive.h"
 #include "Cog.h"
 #include "CogActive.h"
+#include "Cross.h"
 #include "Receipt.h"
 #include "ReceiptActive.h"
 #include "Battery.h"

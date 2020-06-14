@@ -24,9 +24,11 @@ void M5StackDisplay::DrawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, i
     M5.Lcd.drawRoundRect(x, y, w, h, r, color);
 }
 
-void M5StackDisplay::DrawString(const char *string, int32_t poX, int32_t poY, uint8_t font, uint16_t color)
+void M5StackDisplay::DrawString(const char *string, int32_t poX, int32_t poY, uint8_t font, uint16_t color, bool centered)
 {
     M5.Lcd.setTextColor(color);
+
+    M5.Lcd.setTextDatum(centered ? CC_DATUM : TL_DATUM);
 
     M5.Lcd.drawString(string, poX, poY, font);
 }
@@ -34,4 +36,14 @@ void M5StackDisplay::DrawString(const char *string, int32_t poX, int32_t poY, ui
 void M5StackDisplay::DrawBitmap(int16_t x0, int16_t y0, int16_t w, int16_t h, const uint16_t *data)
 {
     M5.Lcd.drawBitmap(x0, y0, w, h, data);
+}
+
+int M5StackDisplay::GetWidth()
+{
+    return 320;
+}
+
+int M5StackDisplay::GetHeight()
+{
+    return 240;
 }

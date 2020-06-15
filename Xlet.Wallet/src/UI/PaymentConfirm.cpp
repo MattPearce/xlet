@@ -22,7 +22,7 @@ void PaymentConfirm::Update(const std::list<InputEventType> &inputEvents)
         switch (inputEvent)
         {
         case InputEventType::Up:
-            m_onConfirm();
+            m_onCancel();
 
             break;
 
@@ -47,6 +47,11 @@ void DrawIcons(IDisplay *display, int x, int y, const Xlet::Icons::Icon *icon)
 void PaymentConfirm::OnConfirm(std::function<void()> onConfirm)
 {
     m_onConfirm = onConfirm;
+}
+
+void PaymentConfirm::OnCancel(std::function<void()> onCancel)
+{
+    m_onCancel = onCancel;
 }
 
 void PaymentConfirm::Draw(IDisplay *display)

@@ -23,5 +23,4 @@ We are building open source software to transform cheap devices into secure hard
 | Xlet.Wallet | C++ source code for the Xlet wallet software targeting various embedded platforms |
 | Xlet.Mobile | C#/Xamarin based wallet apps for iOS and Android that connect to the hardware wallet over BLE |
 | Xlet.Web | The landing page hosted at https://www.xlet.io |
-| Xlet.WebBluetoothExample | A simple example of a webpage connecting wirelessly to an Xlet wallet (https://demo.xlet.io) |
 | ImageConverter | A .NET Core application to convert input image files into C headers with some extra metadata we use |

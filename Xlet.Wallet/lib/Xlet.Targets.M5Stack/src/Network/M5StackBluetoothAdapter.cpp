@@ -3,6 +3,7 @@
 #include <BLEUtils.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
+#include <sstream>
 
 void M5StackBluetoothAdapter::Initialise()
 {
@@ -34,11 +35,13 @@ void M5StackBluetoothAdapter::CreateCharacteristic(const std::string& serviceUUI
     m_characteristics[characteristicUUID] = std::make_shared<BLECharacteristicData>(characteristic);
 
     characteristic->setCallbacks(m_characteristics[characteristicUUID].get());
+    characteristic->addDescriptor(new BLE2902());
 }
 
-void M5StackBluetoothAdapter::SetCharacteristic(const std::string& characteristicUUID, const std::string& value)
+void M5StackBluetoothAdapter::SetCharacteristic(const std::string& characteristicUUID, std::string value)
 {
     m_characteristics[characteristicUUID]->GetCharacteristic()->setValue(value);
+    m_characteristics[characteristicUUID]->GetCharacteristic()->notify();
 }
 
 void M5StackBluetoothAdapter::SetCharacteristicReadHandler(const std::string &characteristicUUID, std::function<std::string()> onRead)

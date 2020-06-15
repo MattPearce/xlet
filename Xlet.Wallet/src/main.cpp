@@ -18,9 +18,12 @@ DI<IInput> input;
 DI<IBluetoothAdapter> bluetooth;
 std::shared_ptr<IScreen> screen;
 
-void setup(){
-  InitTarget();
+std::string confirmValue = "1";
 
+void setup(){
+
+  InitTarget();
+  
   display = DI(IDisplay);
   input = DI(IInput);
   bluetooth = DI(IBluetoothAdapter);
@@ -45,6 +48,18 @@ void setup(){
     auto confirm = std::make_shared<PaymentConfirm>(value);
 
     confirm->OnConfirm([](){
+      auto bluetoothAdapter = bluetooth->GetInstance();
+
+      bluetoothAdapter->SetCharacteristic(Constants::Bluetooth::StellarPaymentService::Characteristics::PaymentResponseUUID, "Confirmed");
+
+      screen = std::make_shared<MainMenu>();
+    });
+
+    confirm->OnCancel([](){
+      auto bluetoothAdapter = bluetooth->GetInstance();
+
+      bluetoothAdapter->SetCharacteristic(Constants::Bluetooth::StellarPaymentService::Characteristics::PaymentResponseUUID, "Cancelled");
+
       screen = std::make_shared<MainMenu>();
     });
 

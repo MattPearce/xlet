@@ -14,7 +14,7 @@ public:
 
     void CreateCharacteristic(const std::string& serviceUUID, const std::string& characteristicUUID);
 
-    void SetCharacteristic(const std::string& characteristicUUID, const std::string& value);
+    void SetCharacteristic(const std::string& characteristicUUID, std::string value);
 
     void SetCharacteristicReadHandler(const std::string& characteristicUUID, std::function<std::string()> onRead);
 

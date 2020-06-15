@@ -16,6 +16,8 @@ public:
     void Draw(IDisplay* display);
 
     void OnConfirm(std::function<void()> onConfirm);
+    
+    void OnCancel(std::function<void()> onCancel);
 
 private:
     const std::string m_amount;
@@ -25,6 +27,7 @@ private:
     int m_offset;
 
     std::function<void()> m_onConfirm;
+    std::function<void()> m_onCancel;
 
     Xlet::Icons::Battery m_iconBattery;
     Xlet::Icons::Bluetooth m_iconBluetooth;

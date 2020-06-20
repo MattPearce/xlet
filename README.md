@@ -8,6 +8,33 @@
 
 We are building open source software to transform cheap devices into secure hardware cryptocurrency wallets. Our goal is to provide consumers with free software to turn cheap (as little as <US$10) devices into secure crypto wallets. Our dream would be to see manufacturers using the software to get cheap crypto wallets onto store shelves.
 
+## Payment Flow
+
+In order for the wallet to construct a valid Stellar transaction, it is necessary to know the current sequence number of the source account. Because of this, the communication flow involves the user first approving the transaction on the wallet, then the wallet sending the source account public key to the website, which requests the sequence number from Stellar
+
+| Xlet Wallet                   |  BLE          | Website                            | HTTPS         | Stellar (Horizon server)      |
+| ----------------------------- | ------------- | ---------------------------------- | ------------- | ----------------------------- |
+|                               |               | User initiates transaction         |               |                               |
+|                               |               | Scans for compatible BLE devices   |               |                               |
+|                               |               | User selects wallet                |               |                               |
+|                               | :arrow_left:  | Sends BeginPaymentRequest          |               |                               |
+| Displays transaction details  |               |                                    |               |                               |
+| User approves transaction     |               |                                    |               |                               |
+| Sends PaymentDetailsRequired  | :arrow_right: |                                    |               |                               |
+|                               |               | Requests account sequence number   | :arrow_right: |                               |
+|                               |               |                                    | :arrow_left:  | Responds with account details |
+|                               | :arrow_left:  | Sends CompletePaymentRequest       |               |                               |
+| Verifies payment approved     |               |                                    |               |                               |
+| Constructs transaction        |               |                                    |               |                               |
+| Signs transaction             |               |                                    |               |                               |
+| Sends CompletePaymentResponse | :arrow_right: |                                    |               |                               |
+|                               |               | Submits transaction to network     | :arrow_right: |                               |
+|                               |               |                                    |               | Verifies transaction          |
+|                               |               |                                    |               | Completes transaction         |
+|                               |               |                                    | :arrow_left:  | Sends transaction details     |
+|                               |               | Informs user of transaction result |               |                               |
+
+
 ## Build Status
 
 | Platform | Build Status | CI Platform |

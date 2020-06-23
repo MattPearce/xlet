@@ -1,6 +1,6 @@
 #include "StellarCrypto.h"
 
-#include <base32/base32.h>
+#include <base32.h>
 
 #include "Stellar/Stellar-transaction.h"
 

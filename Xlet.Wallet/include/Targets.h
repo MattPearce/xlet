@@ -6,4 +6,6 @@
 #endif
 
 // Currently only Stellar is supported
-#include <StellarCrypto.h>
+#ifdef XLET_CRYPTO_STELLAR
+    #include <StellarCrypto.h>
+#endif

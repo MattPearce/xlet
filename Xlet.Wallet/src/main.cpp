@@ -7,6 +7,7 @@
 #include <Display/IDisplay.h>
 #include <Input/IInput.h>
 #include <Network/IBluetoothAdapter.h>
+#include <ICrypto.h>
 
 // Local includes
 #include "UI/MainMenu.h"

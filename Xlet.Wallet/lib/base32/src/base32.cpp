@@ -19,18 +19,18 @@
 
 #include <string>
 
-#include "base32/base32.h"
+#include "base32.h"
 
 std::string base32_decode(const std::string& encoded) {
   std::string result;
   int buffer = 0;
   int bitsLeft = 0;
-  int count = 0;
-  for (const uint8_t *ptr = encoded.c_str(); count < bufSize && *ptr; ++ptr) {
-    uint8_t ch = *ptr;
+  for(char ch : encoded) 
+  {
     if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\n' || ch == '-') {
       continue;
     }
+
     buffer <<= 5;
 
     // Deal with commonly mistyped characters
@@ -47,14 +47,15 @@ std::string base32_decode(const std::string& encoded) {
       ch = (ch & 0x1F) - 1;
     } else if (ch >= '2' && ch <= '7') {
       ch -= '2' - 26;
-    } else {
-      return -1;
+    } else 
+    {
+      return "";
     }
 
     buffer |= ch;
     bitsLeft += 5;
     if (bitsLeft >= 8) {
-      result.push_back(buffer >> (bitsLeft - 8))
+      result.push_back(buffer >> (bitsLeft - 8));
       bitsLeft -= 8;
     }
   }

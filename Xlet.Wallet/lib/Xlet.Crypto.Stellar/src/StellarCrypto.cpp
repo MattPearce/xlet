@@ -22,9 +22,9 @@ stellar::uint256 GetED25519(const std::string &publicKey)
 
     auto expectedVersion = VersionBytes::ed25519PublicKey;
 
-    if (versionByte != = expectedVersion)
+    if (versionByte != (char)expectedVersion)
     {
-        throw new std::exception("Key not expected type");
+        throw std::invalid_argument("Key not expected type");
     }
 
     /* WIP: Implement CRC16XMODEM library for checksum verification

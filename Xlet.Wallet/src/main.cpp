@@ -1,11 +1,13 @@
 // Framework includes
 #include <Arduino.h>
+#include <string>
 
 // Target includes
 #include <DI.h>
 #include <Display/IDisplay.h>
 #include <Input/IInput.h>
 #include <Network/IBluetoothAdapter.h>
+#include <ICrypto.h>
 
 // Local includes
 #include "UI/MainMenu.h"
@@ -17,8 +19,6 @@ DI<IDisplay> display;
 DI<IInput> input;
 DI<IBluetoothAdapter> bluetooth;
 std::shared_ptr<IScreen> screen;
-
-std::string confirmValue = "1";
 
 void setup(){
 
@@ -70,6 +70,7 @@ void setup(){
 
   bluetoothAdapter->StartAdvertising();
 }
+
 
 // the loop routine runs over and over again forever
 void loop() {

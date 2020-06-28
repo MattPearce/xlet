@@ -4,3 +4,8 @@
 #ifdef XLET_TARGET_M5STACK
     #include <M5StackTarget.h>
 #endif
+
+// Currently only Stellar is supported
+#ifdef XLET_CRYPTO_STELLAR
+    #include <StellarCrypto.h>
+#endif

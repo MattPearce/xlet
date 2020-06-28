@@ -1,8 +1,8 @@
 {
     "name": "Xlet.Crypto.Stellar",
-    "dependencies": [
-        { "name": "Xlet.Crypto.Base" },
-        { "name": "base32" },
-        { "name": "xdrpp" }
-    ]
+    "dependencies": {
+        "Xlet.Crypto.Base": "0.1.0",
+        "base32": "0.1.0",
+        "xdrpp": "MattPearce/xdrpp#1.0.0"
+    }
 }

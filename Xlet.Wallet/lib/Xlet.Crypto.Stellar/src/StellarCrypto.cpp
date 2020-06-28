@@ -1,6 +1,23 @@
+
 #include "StellarCrypto.h"
 
+#include <string>
+
 #include <base32.h>
+#include <sstream>
+
+namespace std
+{
+    // Patching compiler issue causing symbol to not be found
+    // https://stackoverflow.com/questions/12975341/to-string-is-not-a-member-of-std-says-g-mingw
+    template <typename T>
+    std::string to_string(const T &n)
+    {
+        std::ostringstream stm;
+        stm << n;
+        return stm.str();
+    }
+}
 
 #include "Stellar/Stellar-transaction.h"
 

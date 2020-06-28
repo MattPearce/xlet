@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <string>
-#include <types.h>
+#include <stdint.h>
 
 class ICrypto
 {
